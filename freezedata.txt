@@ -1,11 +1,11 @@
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 local X = Material.Load({
-	Title = "AFS - gThien.",
+	Title = "AFS Dupe data - by gThien.",
 	Style = 3,
-	SizeX = 300,
-	SizeY = 150,
-	Theme = "White",
+	SizeX = 200,
+	SizeY = 200,
+	Theme = "Dark",
 	ColorOverrides = {
 		MainFrame = Color3.fromRGB(35,35,35)
 	}
@@ -18,7 +18,7 @@ local Y = X.New({
 local A = Y.Button({
 	Text = "Selected no Type",
 	Callback = function()
-		if Type == "Start Freeze Data" then
+		if Type == "gThien Data" then
 		local args = {
     [1] = {
         ["AutoSell"] = {
@@ -83,7 +83,7 @@ local A = Y.Button({
 
 game:GetService("ReplicatedStorage").Remote.SetSettings:FireServer(unpack(args))
 TextField:SetText("Started")
-		elseif Type == "Undo Freeze Data" then
+		elseif Type == "gThien un Data" then
 		local args = {
 [1] = {
  ["AutoSell"] = {
@@ -157,8 +157,8 @@ local D = Y.Dropdown({
 		getgenv().Type = Value
 	end,
 	Options = {
-		"Start Freeze Data",
-		"Undo Freeze Data"
+		"gThien Data",
+		"gThien un Data"
 	}
 })
 
