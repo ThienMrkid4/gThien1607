@@ -1,9 +1,9 @@
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 local X = Material.Load({
-	Title = "AFS Dupe data - by gThien.",
+	Title = "Back data - by gThien.",
 	Style = 3,
-	SizeX = 200,
+	SizeX = 250,
 	SizeY = 200,
 	Theme = "Dark",
 	ColorOverrides = {
@@ -18,7 +18,7 @@ local Y = X.New({
 local A = Y.Button({
 	Text = "Selected no Type",
 	Callback = function()
-		if Type == "gThien Data" then
+		if Type == "Back Data" then
 		local args = {
     [1] = {
         ["AutoSell"] = {
@@ -83,7 +83,7 @@ local A = Y.Button({
 
 game:GetService("ReplicatedStorage").Remote.SetSettings:FireServer(unpack(args))
 TextField:SetText("Started")
-		elseif Type == "gThien un Data" then
+		elseif Type == "Unback Data" then
 		local args = {
 [1] = {
  ["AutoSell"] = {
@@ -157,8 +157,8 @@ local D = Y.Dropdown({
 		getgenv().Type = Value
 	end,
 	Options = {
-		"gThien Data",
-		"gThien un Data"
+		"Back Data",
+		"UnBack Data"
 	}
 })
 
